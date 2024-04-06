@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { icons } from "lucide-react";
 import { ThemeProvider } from "@/components/providers/themes-provider";
+import { ConvexClientProvider } from "@/components/providers/convex-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,14 +34,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+       <ConvexClientProvider>
         <ThemeProvider
         attribute="class"
         defaultTheme="system"
         enableSystem
         disableTransitionOnChange
-        storageKey="Motion-themes-2">
+        storageKey="motion-themes-2">
         {children}
         </ThemeProvider>
+        </ConvexClientProvider>
         </body>
     </html>
   );
