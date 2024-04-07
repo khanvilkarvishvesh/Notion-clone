@@ -60,7 +60,7 @@ export const Navigation = () => {
     }
   }, [pathname, isMobile]);
 
-  const handleMouseDown = (
+  const handleasdDown = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     event.preventDefault();
@@ -191,7 +191,7 @@ export const Navigation = () => {
           </Popover>
         </div>
         <div
-          onMouseDown={handleMouseDown}
+          onMouseDown={handleasdDown}
           onClick={resetWidth}
           className="opacity-0 group-hover/sidebar:opacity-100 transition cursor-ew-resize absolute h-full w-1 bg-primary/10 right-0 top-0"
         />
